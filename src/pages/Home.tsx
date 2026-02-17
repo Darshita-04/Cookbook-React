@@ -4,7 +4,6 @@ import { useCallback, useEffect, useState } from "react";
 import RecipeList from "../components/RecipeList";
 import RecipeFilter from "../components/RecipeFilter";
 import Pagination from "../components/Pagination";
-import Loader from "../components/Loader";
 import type { Recipe,Cuisine } from '../types/recipe';
 
 const Home = () => {
@@ -113,10 +112,11 @@ const Home = () => {
       </section>
       
       <section className="recipes">
-        <div className="container">
+        <div className="container"> 
+           
           {hasSearched && (      
           error ? <div className="error-message flex-center">{error}</div> :      
-          loading && !recipes.length ? ( <Loader />) 
+          loading && !recipes.length ? (<div className="recipe-loader">Loading delicious recipes...</div>) 
           :
           <>
           <div className="filters">
