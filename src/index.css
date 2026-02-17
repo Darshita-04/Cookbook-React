@@ -301,6 +301,9 @@ button:disabled {
   .hero .container {
     margin: 0 auto;
   }
+  .filters {
+    justify-content: center;
+  }
 }
 @media(max-width:991px ){
   .recipe-details-grid {
